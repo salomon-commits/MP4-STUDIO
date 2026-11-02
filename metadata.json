@@ -1,0 +1,8 @@
+{
+  "name": "MP4 Studio",
+  "description": "Convertisseur vidéo dans le navigateur - convertissez vos fichiers vidéo en MP4 localement sans téléversement vers un serveur.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
