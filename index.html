@@ -9,31 +9,170 @@
 .wrap{max-width:1000px;margin:auto;padding:34px 20px 60px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}.brand{display:flex;align-items:center;gap:12px;font-weight:750}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,#9b8dff,#5c4bd4);display:grid;place-items:center}.tag{font-size:12px;color:#c3bcff;border:1px solid #514a82;background:#292447;padding:5px 10px;border-radius:20px}
 h1{font-size:clamp(30px,5vw,46px);line-height:1.1;letter-spacing:-1.5px;margin:0 0 12px}.intro{color:var(--muted);max-width:650px;margin:0 0 28px}.panel{background:#151a24ed;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 18px 55px #0003}
 .drop{border:1.5px dashed #515c76;border-radius:16px;min-height:190px;display:grid;place-items:center;text-align:center;padding:25px;background:#111722}.drop.over{border-color:var(--accent);background:#211e39}.symbol{font-size:34px}.drop strong{display:block;font-size:17px}.drop p{color:var(--muted);margin:5px 0 15px;font-size:13px}.btn{border:0;border-radius:11px;padding:11px 16px;font-weight:700;cursor:pointer;background:var(--accent);color:white}.btn:disabled{opacity:.45;cursor:not-allowed}.btn.secondary{background:#252d3c;border:1px solid #3a4559}.btn.small{padding:7px 10px;font-size:12px}.settings{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:18px}.field label{display:block;color:var(--muted);font-size:12px;margin:0 0 6px}.field select{width:100%;background:#101620;color:var(--text);border:1px solid #354055;border-radius:10px;padding:11px}
-.queue-head{display:flex;justify-content:space-between;margin:26px 0 12px}.queue-head h2{font-size:16px;margin:0}.count,.meta,.status,.hint{color:var(--muted);font-size:12px}.items{display:grid;gap:10px}.empty{padding:23px;text-align:center;color:var(--muted);border:1px solid var(--line);border-radius:13px}.file{display:grid;grid-template-columns:42px minmax(0,1fr) auto;gap:12px;align-items:center;background:#111722;border:1px solid #293244;border-radius:13px;padding:12px}.fileicon{width:42px;height:42px;background:#24213f;border-radius:11px;display:grid;place-items:center}.filename{font-weight:650;overflow-wrap:anywhere}.status.done{color:var(--green)}.status.error{color:var(--red)}.bar{height:5px;background:#2a3241;border-radius:8px;overflow:hidden;margin-top:7px}.bar span{display:block;height:100%;background:var(--accent)}.actions{display:flex;gap:7px}.bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:17px;flex-wrap:wrap}.notice{font-size:12px;color:#c2c9d7;background:#111722;border:1px solid #293244;border-radius:12px;padding:12px 14px;margin-top:18px}footer{text-align:center;color:#687488;font-size:11px;margin-top:25px}
+.queue-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:26px 0 12px}.queue-tools{display:flex;align-items:center;gap:8px}.file-actions{display:flex;gap:7px;flex-wrap:wrap}.queue-head h2{font-size:16px;margin:0}.count,.meta,.status,.hint{color:var(--muted);font-size:12px}.items{display:grid;gap:10px}.empty{padding:23px;text-align:center;color:var(--muted);border:1px solid var(--line);border-radius:13px}.file{display:grid;grid-template-columns:42px minmax(0,1fr) auto;gap:12px;align-items:center;background:#111722;border:1px solid #293244;border-radius:13px;padding:12px}.fileicon{width:42px;height:42px;background:#24213f;border-radius:11px;display:grid;place-items:center}.filename{font-weight:650;overflow-wrap:anywhere}.status.done{color:var(--green)}.status.error{color:var(--red)}.status.working{color:#c3bcff}.compat{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.5}.bar{height:5px;background:#2a3241;border-radius:8px;overflow:hidden;margin-top:7px}.bar span{display:block;height:100%;background:var(--accent)}.actions{display:flex;gap:7px}.bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:17px;flex-wrap:wrap}.notice{font-size:12px;color:#c2c9d7;background:#111722;border:1px solid #293244;border-radius:12px;padding:12px 14px;margin-top:18px}footer{text-align:center;color:#687488;font-size:11px;margin-top:25px}
 @media(max-width:650px){.wrap{padding:22px 14px 40px}.panel{padding:14px}.settings{grid-template-columns:1fr}.file{grid-template-columns:36px minmax(0,1fr)}.actions{grid-column:2}.tag{display:none}.bottom .btn{width:100%}}
 </style></head><body><div class="wrap">
-<header class="top"><div class="brand"><div class="logo">▶</div><span>MP4 STUDIO</span></div><span class="tag">CONVERSION LOCALE</span></header>
-<h1>Vos vidéos.<br>Un seul format.</h1><p class="intro">Convertissez vos fichiers vidéo en MP4 directement dans votre navigateur. Ajoutez plusieurs vidéos, choisissez la qualité, puis lancez la conversion.</p>
+<header class="top"><div class="brand"><div class="logo">▶</div><span>MP4 STUDIO</span></div><span class="tag">LOCAL · CONFIDENTIEL</span></header>
+<h1>Vos vidéos.<br>Votre format MP4.</h1><p class="intro">Convertissez vos fichiers vidéo en MP4 directement dans votre navigateur. Ajoutez vos vidéos, réglez la qualité et convertissez-les directement sur votre appareil.</p>
 <main class="panel"><div class="drop" id="drop"><div><div class="symbol">＋</div><strong>Glissez-déposez vos vidéos ici</strong><p>ou sélectionnez des fichiers depuis votre appareil</p><button class="btn" id="browse">Choisir des vidéos</button><input id="files" type="file" accept="video/*,.mkv,.avi,.mov,.wmv,.flv,.webm,.mpeg,.mpg,.3gp,.m4v,.ts,.mts,.m2ts,.ogv,.vob" multiple hidden></div></div>
 <div class="settings"><div class="field"><label for="quality">Qualité vidéo</label><select id="quality"><option value="18">Haute — meilleure qualité</option><option value="23" selected>Équilibrée — recommandée</option><option value="28">Légère — fichier réduit</option></select></div><div class="field"><label for="resolution">Résolution maximale</label><select id="resolution"><option value="0">Conserver l'originale</option><option value="1080">Full HD — 1080p</option><option value="720">HD — 720p</option><option value="480">480p</option></select></div><div class="field"><label for="audio">Audio</label><select id="audio"><option value="128" selected>AAC — 128 kb/s</option><option value="192">AAC — 192 kb/s</option><option value="256">AAC — 256 kb/s</option><option value="none">Sans audio</option></select></div></div>
-<div class="queue-head"><h2>Fichiers à convertir</h2><span class="count" id="count">0 fichier</span></div><div class="items" id="items"><div class="empty">Aucun fichier ajouté pour le moment.</div></div>
-<div class="bottom"><span class="hint" id="engineState">Le moteur sera chargé au premier lancement.</span><button class="btn" id="convert" disabled>Convertir en MP4</button></div>
+<div class="queue-head"><h2>Fichiers à convertir</h2><div class="queue-tools"><span class="count" id="count">0 fichier</span><button class="btn secondary small" id="clearDone" type="button">Effacer les terminés</button></div></div><div class="items" id="items"><div class="empty">Aucun fichier ajouté pour le moment.</div></div>
+<div class="compat">Formats courants acceptés en entrée : MP4, MOV, MKV, AVI, WEBM, MTS/M2TS, TS, WMV, FLV et autres formats reconnus par le moteur. La prise en charge dépend des codecs contenus dans chaque vidéo. Les fichiers volumineux peuvent dépasser la mémoire disponible du navigateur.</div><div class="bottom"><span class="hint" id="engineState" role="status" aria-live="polite">Moteur local prêt à être chargé au premier lancement.</span><button class="btn" id="convert" disabled>Convertir en MP4</button></div>
 <div class="notice"><b>Confidentialité :</b> vos fichiers sont traités localement dans votre navigateur et ne sont pas envoyés sur un serveur. Le moteur FFmpeg est chargé depuis des ressources publiques. Les vidéos restent sur votre appareil.</div></main><footer>MP4 STUDIO · Conversion vidéo dans le navigateur</footer></div>
 <script src="./vendor/ffmpeg.js"></script>
 <script type="module">
-const { FFmpeg } = window.FFmpegWASM;
-const toBlobURL = async (url, mimeType) => {
+const $ = id => document.getElementById(id);
+const input = $('files'), drop = $('drop'), items = $('items'), button = $('convert');
+const FFmpeg = window.FFmpegWASM?.FFmpeg;
+const allowedExtensions = new Set(['mp4','m4v','mov','mkv','avi','webm','wmv','flv','mpeg','mpg','3gp','ts','mts','m2ts','ogv','vob','mpg','mxf']);
+const queue = [];
+const blobUrls = [];
+let engine = null, busy = false;
+
+const size = n => n < 1048576 ? (n / 1024).toFixed(0) + ' Ko' : (n / 1048576).toFixed(1) + ' Mo';
+const baseName = s => s.replace(/\.[^.]+$/, '').replace(/[^\p{L}\p{N}_-]+/gu, '_').slice(0, 90) || 'video';
+const messageOf = err => String(err?.message || err || 'Erreur inconnue').replace(/https?:\/\/\S+/g, 'ressource externe').slice(0, 220);
+
+function render() {
+  $('count').textContent = queue.length + ' fichier' + (queue.length > 1 ? 's' : '');
+  button.disabled = busy || !queue.some(f => f.status === 'waiting');
+  $('clearDone').disabled = busy || !queue.some(f => f.status === 'done');
+  items.replaceChildren();
+  if (!queue.length) {
+    const empty = document.createElement('div');
+    empty.className = 'empty';
+    empty.textContent = 'Aucun fichier ajouté pour le moment.';
+    items.append(empty);
+    return;
+  }
+  queue.forEach((f, index) => {
+    const el = document.createElement('div'); el.className = 'file';
+    const icon = document.createElement('div'); icon.className = 'fileicon'; icon.textContent = '▣';
+    const info = document.createElement('div');
+    const name = document.createElement('div'); name.className = 'filename'; name.textContent = f.name;
+    const meta = document.createElement('div'); meta.className = 'meta'; meta.textContent = size(f.size);
+    const status = document.createElement('div'); status.className = 'status ' + f.status;
+    status.textContent = f.message || ({waiting:'En attente',working:'Conversion en cours…',done:'Conversion terminée',error:'Échec de conversion'}[f.status]);
+    const bar = document.createElement('div'); bar.className = 'bar';
+    const fill = document.createElement('span'); fill.style.width = (f.progress || 0) + '%'; bar.append(fill);
+    info.append(name, meta, status, bar);
+    const actions = document.createElement('div'); actions.className = 'file-actions';
+    if (f.status === 'done') {
+      const link = document.createElement('a'); link.href = f.url; link.download = f.outputName; link.className = 'btn small'; link.textContent = 'Télécharger'; actions.append(link);
+    } else if (f.status === 'waiting' || f.status === 'error') {
+      if (f.status === 'error') {
+        const retry = document.createElement('button'); retry.className = 'btn secondary small'; retry.textContent = 'Réessayer';
+        retry.disabled = busy; retry.onclick = () => { f.status = 'waiting'; f.progress = 0; f.message = ''; render(); }; actions.append(retry);
+      }
+      const remove = document.createElement('button'); remove.className = 'btn secondary small'; remove.textContent = 'Retirer';
+      remove.disabled = busy; remove.onclick = () => { if (f.url) URL.revokeObjectURL(f.url); queue.splice(index, 1); render(); }; actions.append(remove);
+    }
+    el.append(icon, info, actions); items.append(el);
+  });
+}
+
+function addFiles(fileList) {
+  for (const file of Array.from(fileList || [])) {
+    const ext = (file.name.split('.').pop() || '').toLowerCase();
+    const duplicate = queue.some(f => f.name === file.name && f.size === file.size && f.lastModified === file.lastModified);
+    if (duplicate) continue;
+    const entry = { file, name:file.name, size:file.size, lastModified:file.lastModified, status:'waiting', progress:0, message:'' };
+    if (!file.size) { entry.status = 'error'; entry.message = 'Fichier vide ou illisible.'; }
+    else if (!allowedExtensions.has(ext) && !(file.type || '').startsWith('video/')) { entry.status = 'error'; entry.message = 'Type de fichier non reconnu comme vidéo.'; }
+    queue.push(entry);
+  }
+  render();
+}
+
+$('browse').addEventListener('click', () => input.click());
+input.addEventListener('change', e => { addFiles(e.target.files); input.value = ''; });
+for (const eventName of ['dragenter','dragover']) drop.addEventListener(eventName, e => { e.preventDefault(); drop.classList.add('over'); });
+for (const eventName of ['dragleave','drop']) drop.addEventListener(eventName, e => { e.preventDefault(); drop.classList.remove('over'); });
+drop.addEventListener('drop', e => addFiles(e.dataTransfer?.files));
+$('clearDone').addEventListener('click', () => {
+  if (busy) return;
+  for (let i = queue.length - 1; i >= 0; i--) {
+    if (queue[i].status === 'done') { URL.revokeObjectURL(queue[i].url); queue.splice(i, 1); }
+  }
+  render();
+});
+
+async function toBlobURL(url, mimeType) {
   const response = await fetch(url);
-  if (!response.ok) throw new Error('Téléchargement du moteur impossible : HTTP ' + response.status);
-  return URL.createObjectURL(new Blob([await response.arrayBuffer()], { type: mimeType }));
-};
-const $=id=>document.getElementById(id),input=$('files'),drop=$('drop'),items=$('items'),button=$('convert');let queue=[],engine=null,busy=false;
-const size=n=>n<1048576?(n/1024).toFixed(0)+' Ko':(n/1048576).toFixed(1)+' Mo',baseName=s=>s.replace(/\.[^.]+$/,'').replace(/[^\p{L}\p{N}_-]+/gu,'_').slice(0,90)||'video';
-function render(){ $('count').textContent=queue.length+' fichier'+(queue.length>1?'s':'');button.disabled=busy||!queue.some(f=>f.status==='waiting');items.innerHTML='';if(!queue.length){items.innerHTML='<div class="empty">Aucun fichier ajouté pour le moment.</div>';return}queue.forEach((f,i)=>{const el=document.createElement('div');el.className='file';const ic=document.createElement('div');ic.className='fileicon';ic.textContent='▣';const info=document.createElement('div'),name=document.createElement('div');name.className='filename';name.textContent=f.name;const meta=document.createElement('div');meta.className='meta';meta.textContent=size(f.size);const status=document.createElement('div');status.className='status '+f.status;status.textContent=f.message||({waiting:'En attente',working:'Conversion en cours…',done:'Conversion terminée',error:'Échec de conversion'}[f.status]);const bar=document.createElement('div');bar.className='bar';const fill=document.createElement('span');fill.style.width=(f.progress||0)+'%';bar.append(fill);info.append(name,meta,status,bar);const actions=document.createElement('div');actions.className='actions';if(f.status==='done'){const a=document.createElement('a');a.href=f.url;a.download=f.outputName;a.className='btn small';a.textContent='Télécharger';actions.append(a)}else if(f.status==='waiting'&&!busy){const b=document.createElement('button');b.className='btn secondary small';b.textContent='Retirer';b.onclick=()=>{queue.splice(i,1);render()};actions.append(b)}el.append(ic,info,actions);items.append(el)})}
-function addFiles(list){Array.from(list).forEach(file=>{if(!queue.some(f=>f.name===file.name&&f.size===file.size))queue.push({file,name:file.name,size:file.size,status:'waiting',progress:0})});render()}
-$('browse').onclick=()=>input.click();input.onchange=e=>{addFiles(e.target.files);input.value=''};['dragenter','dragover'].forEach(evt=>drop.addEventListener(evt,e=>{e.preventDefault();drop.classList.add('over')}));['dragleave','drop'].forEach(evt=>drop.addEventListener(evt,e=>{e.preventDefault();drop.classList.remove('over')}));drop.addEventListener('drop',e=>addFiles(e.dataTransfer.files));
-async function loadEngine(){if(engine)return engine;$('engineState').textContent='Chargement du moteur FFmpeg…';const ff=new FFmpeg();ff.on('progress',({progress})=>{const f=queue.find(x=>x.status==='working');if(f){f.progress=Math.min(99,Math.round(progress*100));render()}});const core='https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/umd';await ff.load({coreURL:await toBlobURL(core+'/ffmpeg-core.js','text/javascript'),wasmURL:await toBlobURL(core+'/ffmpeg-core.wasm','application/wasm')});engine=ff;$('engineState').textContent='Moteur prêt. Conversion sur cet appareil.';return ff}
-function args(inputFile,output){const h=Number($('resolution').value),audio=$('audio').value,a=['-i',inputFile,'-map','0:v:0','-c:v','libx264','-preset','ultrafast','-crf',$('quality').value,'-pix_fmt','yuv420p'];if(audio==='none')a.push('-an');else a.push('-map','0:a:0?','-c:a','aac','-b:a',audio+'k');if(h)a.push('-vf','scale=w=if(gt(iw,ih),min(iw,('+h+'*16/9)),-2):h=if(gt(ih,iw),min(ih,'+h+'),-2):force_original_aspect_ratio=decrease');a.push('-movflags','+faststart','-sn',output);return a}
-button.onclick=async()=>{if(busy)return;busy=true;button.textContent='Conversion…';render();try{const ff=await loadEngine();for(let i=0;i<queue.length;i++){const f=queue[i];if(f.status!=='waiting')continue;f.status='working';f.progress=0;f.message='Préparation…';render();const ext=(f.name.split('.').pop()||'dat').toLowerCase().replace(/[^a-z0-9]/g,'')||'dat',src='input_'+i+'.'+ext,dst='converted_'+i+'.mp4';try{await ff.writeFile(src,new Uint8Array(await f.file.arrayBuffer()));await ff.exec(args(src,dst));const data=await ff.readFile(dst);f.url=URL.createObjectURL(new Blob([data.buffer],{type:'video/mp4'}));f.outputName=baseName(f.name)+'.mp4';f.status='done';f.progress=100;f.message='Conversion terminée';await ff.deleteFile(src);await ff.deleteFile(dst)}catch(err){f.status='error';f.message='Erreur : '+String(err.message||err).slice(0,160);try{await ff.deleteFile(src)}catch{}try{await ff.deleteFile(dst)}catch{}}render()}}catch(err){$('engineState').textContent='Impossible de charger FFmpeg : '+String(err.message||err)}finally{busy=false;button.textContent='Convertir en MP4';render()}};
-window.addEventListener('beforeunload',()=>queue.forEach(f=>f.url&&URL.revokeObjectURL(f.url)));
+  if (!response.ok) throw new Error('Téléchargement du moteur impossible (HTTP ' + response.status + '). Vérifiez votre connexion.');
+  const objectUrl = URL.createObjectURL(new Blob([await response.arrayBuffer()], { type:mimeType }));
+  blobUrls.push(objectUrl);
+  return objectUrl;
+}
+
+async function loadEngine() {
+  if (engine) return engine;
+  if (!FFmpeg) throw new Error('Le module FFmpeg local ne s’est pas chargé. Actualisez la page et réessayez.');
+  $('engineState').textContent = 'Téléchargement du moteur de conversion…';
+  const ff = new FFmpeg();
+  ff.on('progress', ({ progress }) => {
+    const current = queue.find(f => f.status === 'working');
+    if (current && Number.isFinite(progress)) { current.progress = Math.min(99, Math.max(0, Math.round(progress * 100))); render(); }
+  });
+  const core = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.6/dist/umd';
+  const coreURL = await toBlobURL(core + '/ffmpeg-core.js', 'text/javascript');
+  const wasmURL = await toBlobURL(core + '/ffmpeg-core.wasm', 'application/wasm');
+  await ff.load({ coreURL, wasmURL });
+  engine = ff;
+  $('engineState').textContent = 'Moteur prêt · conversion sur cet appareil.';
+  return ff;
+}
+
+function buildArgs(source, destination) {
+  const maxHeight = Number($('resolution').value), audio = $('audio').value;
+  const args = ['-i', source, '-map', '0:v:0', '-c:v', 'libx264', '-preset', 'ultrafast', '-crf', $('quality').value, '-pix_fmt', 'yuv420p'];
+  if (audio === 'none') args.push('-an');
+  else args.push('-map', '0:a:0?', '-c:a', 'aac', '-b:a', audio + 'k');
+  if (maxHeight) args.push('-vf', 'scale=w=if(gt(iw,ih),min(iw,' + (maxHeight * 16 / 9) + '),-2):h=if(gt(ih,iw),min(ih,' + maxHeight + '),-2)');
+  args.push('-movflags', '+faststart', '-sn', destination);
+  return args;
+}
+
+button.addEventListener('click', async () => {
+  if (busy || !queue.some(f => f.status === 'waiting')) return;
+  busy = true; button.textContent = 'Conversion…'; render();
+  try {
+    const ff = await loadEngine();
+    for (let index = 0; index < queue.length; index++) {
+      const file = queue[index];
+      if (file.status !== 'waiting') continue;
+      file.status = 'working'; file.progress = 0; file.message = 'Préparation…'; render();
+      const ext = (file.name.split('.').pop() || 'dat').toLowerCase().replace(/[^a-z0-9]/g, '') || 'dat';
+      const source = 'input_' + index + '.' + ext, destination = 'converted_' + index + '.mp4';
+      try {
+        $('engineState').textContent = 'Conversion locale en cours…';
+        await ff.writeFile(source, new Uint8Array(await file.file.arrayBuffer()));
+        const exitCode = await ff.exec(buildArgs(source, destination));
+        if (exitCode !== 0) throw new Error('FFmpeg a terminé avec le code ' + exitCode + '. Le codec source peut être incompatible.');
+        const output = await ff.readFile(destination);
+        if (!output || !output.length) throw new Error('Le fichier MP4 généré est vide.');
+        file.url = URL.createObjectURL(new Blob([output], { type:'video/mp4' }));
+        file.outputName = baseName(file.name) + '.mp4';
+        file.status = 'done'; file.progress = 100; file.message = 'Conversion terminée · ' + size(output.length);
+      } catch (err) {
+        file.status = 'error'; file.message = 'Erreur : ' + messageOf(err);
+      } finally {
+        try { await ff.deleteFile(source); } catch {}
+        try { await ff.deleteFile(destination); } catch {}
+      }
+      render();
+    }
+    $('engineState').textContent = 'Traitement terminé. Les fichiers convertis sont prêts à télécharger.';
+  } catch (err) {
+    $('engineState').textContent = 'Moteur indisponible : ' + messageOf(err);
+  } finally {
+    busy = false; button.textContent = 'Convertir en MP4'; render();
+  }
+});
+
+window.addEventListener('beforeunload', () => {
+  queue.forEach(file => { if (file.url) URL.revokeObjectURL(file.url); });
+  blobUrls.forEach(url => URL.revokeObjectURL(url));
+});
+render();
 </script></body></html>
